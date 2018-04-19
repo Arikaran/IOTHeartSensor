@@ -41,6 +41,9 @@ Use: can alert the user in case of danger
 Library: ? (à modifier)  
 Use: gives additional indications on the health of the user by evaluating its temperature  
 
+### Schema de câblage
+![Schema](https://i.imgur.com/OCIpXDq.png)
+
 #### Additional cables: 2 (à modifier)  
 
 
