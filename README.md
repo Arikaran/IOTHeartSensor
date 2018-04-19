@@ -2,6 +2,17 @@
 Projet sur un capteur cardiaque pour le cours d'IOT à l'ESGI  
 
 
+### Nom du projet : HeartQuake  
+
+### Objectifs  
+
+Utiliser un capteur cardiaque, couplé à un thermomètre, afin d'alerter les secours en cas de danger cardiaque d'un l'utilisateur. 
+
+Le projet comporte donc un appareil qui peut analyser l'utilisateur et l'alerter d'un risque via un buzzer, ainsi qu'une application mobile qui permet de suivre l'évolution de son rythme cardiaque et de sa température et qui peut également localiser l'utilisateur et alerter les secours en cas de danger.  
+
+Le code de l'appareil a été développé en C++, et celle de l'application en Java Android.  
+
+
 ### Contenu du Git  
 
 #### PulseSensorPlayground-master.zip : bibliothèque du capteur cardiaque  
