@@ -94,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(JSONObject result) {
                 try {
                     textViewBpm.setText(result.get("bpm").toString());
-                    // textViewThemperature.setText(result.get("temperature").toString());
-                    if ((int) result.get("bpm") < 20 || (int) result.get("bpm") > 170 /*|| (int)result.get("temperature")<20 || (int)result.get("temperature")>40 */) {
+                    textViewThemperature.setText(result.get("temperature").toString());
+                    if ((int) result.get("bpm") < 20 || (int) result.get("bpm") > 150 || (int)result.get("temperature")<20 || (int)result.get("temperature")>40 ) {
                         tabAlerte.add(1);
                         if(tabAlerte.size()>=3){
                             sendSms((int) result.get("bpm")/*,(int) result.get("temperature") */);
