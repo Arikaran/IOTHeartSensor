@@ -112,9 +112,9 @@ int GetBPM(){
         pulseSensor.outputSample();
         Serial.print("BPM: ");
         BPM = pulseSensor.getBeatsPerMinute(0);
-        if(BPM<20 || BPM>200){
+        if(BPM<50 || BPM>200){
           Serial.print("Beep");
-          //digitalWrite(buzzer, HIGH);
+          digitalWrite(buzzer, HIGH);
         }else{
           digitalWrite(buzzer, LOW);
         }
