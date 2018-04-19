@@ -2,10 +2,16 @@
 Projet sur un capteur cardiaque pour le cours d'IOT à l'ESGI  
 
 
+### Contenu du Git  
+
+#### PulseSensorPlayground-master.zip : bibliothèque du capteur cardiaque  
+#### TestCardiaque.ino : code de l'Arduino  
+
+
 ### Composants  
 
 ![Wemos D1 Mini](https://i.ebayimg.com/images/g/d08AAOSwEzxYey3m/s-l300.jpg)  
-#### Wemos D1 Mini
+#### Wemos D1 Mini  
 Architecture : ESP8266  
 Utilisation : carte mère de l'appareil  
 
@@ -20,8 +26,10 @@ Utilisation : peut alerter l'utilisateur en cas de danger
 
 ![Thermometer](http://www.lankatronics.com/pub/media/catalog/product/cache/image/500x500/e9c3970ab036de70892d86c6d221abfe/d/s/ds18b20_1.jpg)  
 #### Thermomètre DS18B20  
-Bibliothèque : ?  
+Bibliothèque : ? (à modifier)  
 Utilisation : donne des indications supplémentaires sur le santé de l'utilisateur en évaluant sa température  
+
+#### Nombre de cables : 2 (à modifier)  
 
 
 
@@ -31,3 +39,4 @@ Samuel BIJOU
 André MOREL  
 Loic GOASGUEN  
 Azedine NAIDJA  
+(Tous élèves en 5ème année dans la filière développement de l'ESGI en spécialité Architecture Logicielle)
