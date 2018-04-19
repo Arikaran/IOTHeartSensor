@@ -66,7 +66,6 @@ void setup() {
 	Serial.begin(115200);
   pinMode(buzzer, OUTPUT);
   Serial.println(buzzer);
-  digitalWrite(buzzer, HIGH);
 	Serial.println();
 	Serial.print("Configuring access point...");
 	/* You can remove the password parameter if you want the AP to be open. */
@@ -104,21 +103,20 @@ void setup() {
 }
 
 int GetBPM(){
-  pinMode(buzzer, OUTPUT);
-  tone(buzzer, HIGH);
-  Serial.println(buzzer);
   int tempval = BPM;
-  while(BPM == tempval){
+  unsigned long msInit = millis();
+  while(BPM == tempval && (millis()- msInit) < 1500 ){
     if (pulseSensor.sawNewSample()) {
       if (--samplesUntilReport == (byte) 0) {
         samplesUntilReport = SAMPLES_PER_SERIAL_SAMPLE;
         pulseSensor.outputSample();
         Serial.print("BPM: ");
         BPM = pulseSensor.getBeatsPerMinute(0);
-        if(BPM<200){
-          tone(buzzer, HIGH);
+        if(BPM<20 || BPM>200){
+          Serial.print("Beep");
+          //digitalWrite(buzzer, HIGH);
         }else{
-          //noTone(buzzer);
+          digitalWrite(buzzer, LOW);
         }
         Serial.print(BPM);
         
