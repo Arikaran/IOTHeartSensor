@@ -17,6 +17,7 @@ Le code de l'appareil a été développé en C++, et celle de l'application en J
 
 #### PulseSensorPlayground-master.zip : bibliothèque du capteur cardiaque  
 #### TestCardiaque.ino : code de l'Arduino  
+#### Android : Projet android studio pour l'application mobile
 
 
 ### Composants  
