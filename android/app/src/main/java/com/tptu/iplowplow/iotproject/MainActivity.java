@@ -94,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(JSONObject result) {
                 try {
                     textViewBpm.setText(result.get("bpm").toString());
-                    // textViewThemperature.setText(result.get("themperature").toString());
-                    if ((int) result.get("bpm") < 20 || (int) result.get("bpm") > 170 /*|| (int)result.get("themperature")<20 || (int)result.get("themperature")>40 */) {
+                    // textViewThemperature.setText(result.get("temperature").toString());
+                    if ((int) result.get("bpm") < 20 || (int) result.get("bpm") > 170 /*|| (int)result.get("temperature")<20 || (int)result.get("temperature")>40 */) {
                         tabAlerte.add(1);
                         if(tabAlerte.size()>=3){
-                            sendSms((int) result.get("bpm")/*,(int) result.get("themperature") */);
+                            sendSms((int) result.get("bpm")/*,(int) result.get("temperature") */);
                             urgenceCall();
                         }
 
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         SmsManager smsManager = SmsManager.getDefault();
-                        smsManager.sendTextMessage("0609246092", null, "Bpm : "+bpm+" ; Thempérature : ; Latitude : "+latitude+" ; Logitude :"+longitude+" ;", null, null);
+                        smsManager.sendTextMessage("0609246092", null, "Bpm : "+bpm+" ; Température : ; Latitude : "+latitude+" ; Logitude :"+longitude+" ;", null, null);
                     }
 
 
